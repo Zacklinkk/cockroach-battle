@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1b1816"><title>蟑螂大作战</title><meta name="description" content="加班后醒来，你缩小到了杂物间。拿起拖鞋，组合武器与符文，闯过五间房回到现实。"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b1816'/%3E%3Cpath d='M11 10l10 12m0-12L11 22M7 16h18M16 5v22' stroke='%23dfb66a' stroke-width='2'/%3E%3Cellipse cx='16' cy='16' rx='5' ry='8' fill='%23dfb66a'/%3E%3C/svg%3E"><link rel="stylesheet" href="style.css?v=viewport9"></head>
+<body>
+<main id="game-shell">
+<canvas id="canvas" tabindex="0" aria-label="蟑螂大作战 3D 游戏画面"></canvas>
+<div class="vignette"></div>
+<header id="hud" hidden>
+ <div class="hud-top"><div><div class="eyebrow">蟑螂大作战 <span id="room">01</span></div><div class="hearts" id="hearts">● ● ●</div></div><div class="time"><span id="timer">00:00</span><small id="killcount">清除 0</small></div><button class="icon-btn" id="pause" aria-label="暂停游戏">Ⅱ</button></div>
+ <div class="level-line"><span id="level">LV. 1</span><div class="xp-track"><i id="xp"></i></div><span id="xp-number">0 / 12</span></div>
+ <div class="objective"><i id="mother-dot"></i><span id="objective">寻找藏匿的虫母</span><span id="alive">—</span></div>
+</header>
+<div id="compass" hidden><span id="compass-arrow">↑</span><small id="compass-text">异响</small></div>
+<div id="toast" role="status"></div><div id="combo-popup"></div>
+<footer id="loadout" hidden><div class="weapon-mini"><span id="weapon-icon">▰</span><div><strong id="weapon-name">拖鞋</strong><small id="rune-summary">等待第一枚符文</small></div></div><div id="combo-badges"></div></footer>
+<div id="joystick" hidden><div id="stick-base"><div id="stick"></div></div><span>拖动走位 · 自动攻击</span></div>
+<div id="hurt"></div><div id="flash"></div>
+<section id="start-screen" class="overlay start">
+ <div class="start-top"><span class="edition">蟑 螂 大 作 战</span><span class="tag">3D 生存肉鸽</span></div>
+ <div class="start-title"><div class="chapter">ONE SLIPPER. FIVE ROOMS.</div><h1>蟑螂<br><span>大作战</span></h1><p>从一只拖鞋开始，闯回现实。</p></div>
+ <div class="start-bottom"><div class="intro"><span>01 <b>走位生存</b></span><span>02 <b>叠加符文</b></span><span>03 <b>找到虫母</b></span></div><div class="starter-gear"><span>▰</span><div><strong>一只旧拖鞋</strong><small>初始装备 · 升级抽取新武器</small></div><button id="replay-story" class="text-btn">观看故事 ↗</button></div><button class="primary" id="start" disabled><span id="start-label">正在进入房间</span><span>↗</span></button><div class="loading-track"><i id="loading-fill"></i></div><p class="hint" id="loading-hint">首次进入需加载游戏资源</p><div class="controls-hint">手机拖动摇杆 · 电脑 WASD / 方向键 · 自动攻击</div></div>
+</section>
+<section id="upgrade-screen" class="overlay modal" hidden><div class="modal-inner"><div class="chapter">LEVEL UP</div><h2>变强一点<span>。</span></h2><p class="subtext">选择一项奖励，继续叠加你的组合</p><div id="upgrade-cards"></div><p class="footnote">游戏已暂停 · 武器只能保留一把 · 符文持续叠加</p></div></section>
+<section id="pause-screen" class="overlay modal" hidden><div class="modal-inner small"><div class="chapter">TAKE A BREATH</div><h2>喘口气。</h2><p class="subtext">房间暂时安静了。</p><div id="pause-build"></div><button class="primary" id="resume">继续清剿 <span>↗</span></button><button class="text-btn" id="sound">声音：开启</button></div></section>
+<section id="win-screen" class="overlay modal" hidden><div class="modal-inner small"><div class="chapter" id="win-chapter">ROOM CLEARED</div><h2 id="win-title">这一间，<br>干净了。</h2><p class="subtext" id="win-description">虫母与剩余蟑螂已全部清除。<br>你的武器与符文，将带进下一间房。</p><div id="win-stats" class="stats"></div><button class="primary" id="next">推开下一扇门 <span>↗</span></button></div></section>
+<section id="death-screen" class="overlay death" hidden><div id="death-insect"></div><div class="death-content"><div class="chapter">THREE CHANCES. GONE.</div><h2>你脏了</h2><p id="death-stats"></p><button class="primary" id="restart">重新缩小 <span>↻</span></button><small>本轮成长已清零</small></div></section>
+<section id="story-screen" class="story-screen" role="dialog" aria-modal="true" aria-label="故事：从加班到微缩世界" hidden><video playsinline preload="none" poster="media/story/poster.jpg" aria-label="加班后缩小，拿起拖鞋闯过五间房"><source src="media/story/intro.mp4" type="video/mp4"></video><button data-story-skip class="story-skip">跳过故事 →</button><button data-story-resume class="story-resume" hidden>▶ 继续播放</button><p data-story-status role="status"></p><div class="story-progress"><i data-story-progress></i></div></section>
+<section id="error-screen" class="overlay modal" hidden><div class="modal-inner small"><h2>房门卡住了。</h2><p id="error-text" class="subtext"></p><button class="primary" onclick="location.reload()">重新进入 <span>↻</span></button></div></section>
+</main>
+<script src="engine-manifest.js?v=story8"></script><script src="engine-loader.js?v=story8"></script><script src="game.js?v=story8"></script><script src="audio-engine.js?v=story8"></script><script src="cinematic.js?v=story8"></script><script src="story.js?v=story8"></script><script src="viewport.js?v=viewport9"></script><script src="ui.js?v=viewport9"></script>
+</body></html>
