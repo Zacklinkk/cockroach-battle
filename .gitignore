@@ -1,0 +1,8 @@
+/build/
+/node_modules/
+/.sites-runtime/
+/godot/.godot/
+/godot/assets/
+/godot/gdre_export.log
+*.tmp
+/godot/.autoconverted/

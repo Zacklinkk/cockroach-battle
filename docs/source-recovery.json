@@ -1,0 +1,29 @@
+{
+  "kind": "runtime-project-recovery",
+  "source_pack_sha256": "4cf3a26da5a1ed2b1829c4eae1f55b192e936420b99a2a92b5224f5433d9bb9b",
+  "source_pack_bytes": 130517400,
+  "gdre_version": "2.6.4",
+  "detected_godot_version": "4.7.2",
+  "detected_script_bytecode_revision": "4.5.0-stable (ebc36a7)",
+  "verified_files": 163,
+  "checksum_errors": 0,
+  "extracted_files": 163,
+  "decompiled_scripts": 5,
+  "scripts_not_decompiled": 0,
+  "imported_resources": 62,
+  "converted_resources": 62,
+  "lossy_resources": 41,
+  "failed_conversions": 0,
+  "not_converted": 0,
+  "non_importable_conversions": 0,
+  "missing_gltf_external_references": [],
+  "has_fixed_slipper_start": false,
+  "has_gentle_first_room": false,
+  "has_finite_five_room_campaign": false,
+  "limitations": [
+    "Reconstructed editable runtime project; not a recovery of unpublished original sculpt/high-poly/source-authoring files.",
+    "41 resources were reported as lossy by GDRE; original texture source quality cannot be inferred from recovered output.",
+    "Main published runtime PCK must remain unchanged for migration until any re-export is separately verified."
+  ],
+  "validation_scope": "PCK checksum extraction, GDRE conversion report and external glTF file references verified; no editor runtime or visual verification performed."
+}

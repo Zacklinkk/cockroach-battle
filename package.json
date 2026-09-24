@@ -1,0 +1,10 @@
+{
+  "name": "cockroach-battle",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/validate-static.mjs",
+    "verify:viewport": "node scripts/verify-viewport.mjs",
+    "verify:story": "node scripts/verify-story-ui.mjs",
+    "verify:loader": "node scripts/verify-loader.mjs"
+  }
+}

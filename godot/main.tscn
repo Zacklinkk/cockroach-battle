@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://c0duufltv5n7c" path="res://main.gd" id="1"]
+
+[node name="DirtyRoom" type="Node3D" unique_id=1503444417]
+script = ExtResource("1")

@@ -1,0 +1,441 @@
+{
+  "origin": "https://dirty-room.zackliny.chatgpt.site",
+  "source_version": 7,
+  "source_commit": "407cf4af6c788a99443ea1f85781a89de0f3aebc",
+  "assets": {
+    "art-review/after.png": {
+      "bytes": 1538902,
+      "sha256": "4a5a672cb044435dd069ecd3cb7c8d21265805c2db6450a4c27799eca9296a64"
+    },
+    "art-review/approval/hero.png": {
+      "bytes": 2459897,
+      "sha256": "5550ee077d4ac9d9b38b59bca2080bdcd4c53516b78e7380ef12515173b4253d"
+    },
+    "art-review/approval/roach.png": {
+      "bytes": 2491213,
+      "sha256": "2994b5b5d073d434f2413f04d3cc11695c5e2ca621c75aabe59d23d0e27e9b64"
+    },
+    "art-review/approval/room.png": {
+      "bytes": 2740229,
+      "sha256": "e1920438d0c0a4e74eb4a797ca9480c40cc7ec4520f5e7d3a2789e6d5ab13336"
+    },
+    "art-review/before.png": {
+      "bytes": 1534555,
+      "sha256": "64bc4e4b70a8da2392138fd1134ea51ee999252c19da88b80aa390964d0c2df0"
+    },
+    "art-review/detail-after.png": {
+      "bytes": 1651264,
+      "sha256": "122cef02e2ce252ebaeb8916da0a7d9315c54fdab0c0d713c5c0ea0090d11310"
+    },
+    "art-review/detail-before.png": {
+      "bytes": 1641535,
+      "sha256": "c4266d88237d09a1b48efdf3e1634d04aeabb40bd722c812b9278720b3f12395"
+    },
+    "art-review/exploded.png": {
+      "bytes": 1270246,
+      "sha256": "8f0777e96c8c276b34ea1cb616f593a5b746de24da4f57b2d085757c03727dc6"
+    },
+    "art-review/roach-reference.png": {
+      "bytes": 2200542,
+      "sha256": "a040ef5353ba9557d14067d75f59ec44c4e38a1e7135b9251c63d3c6eff84151"
+    },
+    "audio-engine.js": {
+      "bytes": 5529,
+      "sha256": "7aaee9c3c36896a5d1ebb3658b0c631cacb0983d8c76d09175d10c28daa60726"
+    },
+    "cinematic.js": {
+      "bytes": 1073,
+      "sha256": "a41cdfeb123a1b5a167d1622bbe371cd92bed7b8769a794aae0af4059e6620dd"
+    },
+    "defeat.png": {
+      "bytes": 1821613,
+      "sha256": "08d917e8b788c463dcca95d34f56453f5199c15bfcf938e9edaacbaaa3d90bf8"
+    },
+    "engine-loader.js": {
+      "bytes": 8650,
+      "sha256": "bd4c94000d69fd9693d457795694ced827237b936453e74fe793661709af6d16"
+    },
+    "engine-manifest.js": {
+      "bytes": 577,
+      "sha256": "22d1e3b16001764eaa8648bfc6e4bf6cd15de6dce30b3f24a9cfc975ea92bcc7"
+    },
+    "game.audio.position.worklet.js": {
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    "game.audio.worklet.js": {
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    "game.js": {
+      "bytes": 279815,
+      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
+    },
+    "index.html": {
+      "bytes": 6021,
+      "sha256": "d96e71c5a37c16ba2a0cc886dd1c76faab5136d9574217c7282214cea663f745"
+    },
+    "media/audio/break-0.wav": {
+      "bytes": 51200,
+      "sha256": "a90a904e5d41262b35804bf62e534152de693831559ca2c4ade23a05c79b25cf"
+    },
+    "media/audio/break-1.wav": {
+      "bytes": 51200,
+      "sha256": "0c8315531e374e02ddff3a604d67ccc847c1c95ae75b8a9ba380135cb7d99b4c"
+    },
+    "media/audio/break-2.wav": {
+      "bytes": 51200,
+      "sha256": "455fba6330ca47e961bb6eb946cba420a1f975cfcc451c4bcfd7f0a8c35959c7"
+    },
+    "media/audio/cast-staple.wav": {
+      "bytes": 26504,
+      "sha256": "196648152c0e953277d87228df780aa6b2ae96a52bb3c404701db93389b5c4ce"
+    },
+    "media/audio/cast-swing.wav": {
+      "bytes": 26504,
+      "sha256": "5e896ce2c186b12da1ef549c290a6ee03fff76ec767c03a702c0653f4fb203b5"
+    },
+    "media/audio/cast-wand.wav": {
+      "bytes": 26504,
+      "sha256": "c9939e9664d380cd829a092031b25e35dd1c80f549dd1bfd51544e0ea0baf2ec"
+    },
+    "media/audio/chainsaw-loop.wav": {
+      "bytes": 105884,
+      "sha256": "896c32200bd399fe7401b04db0e2d5153e8e97fdde3f34ecae104d8a8ee32330"
+    },
+    "media/audio/crit-0.wav": {
+      "bytes": 51200,
+      "sha256": "1b3f341f16efc09e95627162c8c523d8ec2857dfb344148b3ebeaaa03b6cee93"
+    },
+    "media/audio/crit-1.wav": {
+      "bytes": 51200,
+      "sha256": "3e9a01e2c1d921db2b9aca5655ac11b6b4459d1f0373629f638cf85dc55da496"
+    },
+    "media/audio/crit-2.wav": {
+      "bytes": 51200,
+      "sha256": "fa8941445fa2b27b6da8c78e8935ad0bcf0459117fae80b8227af20df1cbd9a3"
+    },
+    "media/audio/death-flight.wav": {
+      "bytes": 308744,
+      "sha256": "82810545c9d73d3e319441297bc55837577c3f8be4bb868bdb41a593a2947154"
+    },
+    "media/audio/hit-chainsaw-0.wav": {
+      "bytes": 51200,
+      "sha256": "321c16779c7f0b36f63562bd93f7a3d735b9fc420223b72bf614ae6e338552bb"
+    },
+    "media/audio/hit-chainsaw-1.wav": {
+      "bytes": 51200,
+      "sha256": "47a2ddf38d73d712881d00101512efc46bd304bc1ef04ab543d6b32b04e5029f"
+    },
+    "media/audio/hit-chainsaw-2.wav": {
+      "bytes": 51200,
+      "sha256": "f406670493a8a876ed3a16d5557d7faf0ea774084bc04275f04dcad9ba84b3e8"
+    },
+    "media/audio/hit-slingshot-0.wav": {
+      "bytes": 51200,
+      "sha256": "d646e0ab49623e64188c64fc71553b4814d035ae4438cc7a8aa313e47c41f365"
+    },
+    "media/audio/hit-slingshot-1.wav": {
+      "bytes": 51200,
+      "sha256": "5077a4365ba452bf052f883300e9a262872bbf778277b29a6972e5358de046f2"
+    },
+    "media/audio/hit-slingshot-2.wav": {
+      "bytes": 51200,
+      "sha256": "d1dbd3f34666a9a1dfa799315300798be68325cc54cc32c566a01b6ce4da1107"
+    },
+    "media/audio/hit-slipper-0.wav": {
+      "bytes": 51200,
+      "sha256": "8d59db018ec1a0a6c29451964ab2a7f057fe9edd5b9189b737dca609815e4ef1"
+    },
+    "media/audio/hit-slipper-1.wav": {
+      "bytes": 51200,
+      "sha256": "54ef7464ff8a8910622bc6ccb81c32762a8af180ec95228d697f89fea3787ce1"
+    },
+    "media/audio/hit-slipper-2.wav": {
+      "bytes": 51200,
+      "sha256": "90366664ec7721bf6dc32b6fa89eb4b4610a9ac9ebe42cc09691f6f1da011a54"
+    },
+    "media/audio/hit-spray-0.wav": {
+      "bytes": 51200,
+      "sha256": "1582a6cf7be107524df881bec925fca17b03a6b11266c0a3fae023243e8f2706"
+    },
+    "media/audio/hit-spray-1.wav": {
+      "bytes": 51200,
+      "sha256": "10898f3a0caf7d6a9c0b4eba258414eeeed2373c6dcd3f504d470cf2cdc2732c"
+    },
+    "media/audio/hit-spray-2.wav": {
+      "bytes": 51200,
+      "sha256": "59fa3cd3723546a5a3ec6d55c8ce8450c301035bacab2852cd2abb5e3f796147"
+    },
+    "media/audio/hit-staple-0.wav": {
+      "bytes": 51200,
+      "sha256": "a1436512773cd79c410050bc0fb37b65f10615e19aeff89c4971aaea674625e1"
+    },
+    "media/audio/hit-staple-1.wav": {
+      "bytes": 51200,
+      "sha256": "dff70de8feeddb18e33b03bc22b58c1e17f492eac32708b2fa3c16aa4ee69715"
+    },
+    "media/audio/hit-staple-2.wav": {
+      "bytes": 51200,
+      "sha256": "61f5dae75882101940f93ca0b376a9b2bd9eded992879f06bf52d54652b29f40"
+    },
+    "media/audio/hit-vacuum-0.wav": {
+      "bytes": 51200,
+      "sha256": "6b3e43db222b4e60c64e62be9ecae88d0579cd4b3d4c20aee2796fa8d30a222a"
+    },
+    "media/audio/hit-vacuum-1.wav": {
+      "bytes": 51200,
+      "sha256": "033197cb66a6f2b1ad7e294c9fed64877d12ed4af3b0d62082c2537679cb5f4a"
+    },
+    "media/audio/hit-vacuum-2.wav": {
+      "bytes": 51200,
+      "sha256": "662b105509f333402ca185561b1ac83bfc574d3f8684edb317ddfc6e81e3494f"
+    },
+    "media/audio/hit-wand-0.wav": {
+      "bytes": 51200,
+      "sha256": "efcc03b48c2ec8a9339bab896894c0506125fda1b507f93aaf50526fde09409a"
+    },
+    "media/audio/hit-wand-1.wav": {
+      "bytes": 51200,
+      "sha256": "0b2297ff9ca5a46505210f968f2f44e15bbf1504434b761fa1a7b9e5b553c3b0"
+    },
+    "media/audio/hit-wand-2.wav": {
+      "bytes": 51200,
+      "sha256": "5ca2dddef46759541783a4edaba9c6888536890824784cd60b37f4aecd164ba6"
+    },
+    "media/audio/hit-zapper-0.wav": {
+      "bytes": 51200,
+      "sha256": "ddea9486ebb929ac210d72920b67f2d54b29fade1fece05fa2ce830c77c0c881"
+    },
+    "media/audio/hit-zapper-1.wav": {
+      "bytes": 51200,
+      "sha256": "a8534f5212c1b2af663876b48aacd93d083f61452487282a6e7cbe7711d64a65"
+    },
+    "media/audio/hit-zapper-2.wav": {
+      "bytes": 51200,
+      "sha256": "74395cf82144292819d984a18b3958021526c8e25b630f5d719c9e6627b3dbf6"
+    },
+    "media/audio/hurt.wav": {
+      "bytes": 70604,
+      "sha256": "8985a841dafc156d1ebf120f9eac3b06b51ec977f8e3cc2628cfbcf599aa1250"
+    },
+    "media/audio/ice-crack.wav": {
+      "bytes": 57374,
+      "sha256": "94a1fde83fc9285b3b1d4675e87a6358db7d2dc0c570cf7958a421652e5dcabc"
+    },
+    "media/audio/level.wav": {
+      "bytes": 176444,
+      "sha256": "ad148a6d21827c6b732bdab76fe27bbf3b5e49afd36b6997c9098c83f2340c82"
+    },
+    "media/audio/lightning-chain.wav": {
+      "bytes": 57374,
+      "sha256": "13e8e870d599a8d7c6f9206dad565149c57adf9d4029d4ae95ff7cd171c3d456"
+    },
+    "media/audio/manifest.json": {
+      "bytes": 1554,
+      "sha256": "a09936aad2a4be5ec173c21f5b75436a7e2f3e2b029abcebfab15a19fa161d6b"
+    },
+    "media/audio/mother.wav": {
+      "bytes": 176444,
+      "sha256": "330a4cbc8c3412ef29bb0bae3e0d41e8d6cfc33687f67d19f99dd809d8b423d7"
+    },
+    "media/audio/room-score.mp3": {
+      "bytes": 1281088,
+      "sha256": "5cb68063b0ae1911fdcc4b8d2f1f8622ca12a0be2b2f8d72915ccb7ad5dc7f63"
+    },
+    "media/audio/room-tension.mp3": {
+      "bytes": 1281088,
+      "sha256": "62f2ffd6fe00e2276836ef830a1756d6ec133b5ac45825db2b7b9ce7a82e7059"
+    },
+    "media/audio/rush.wav": {
+      "bytes": 37088,
+      "sha256": "f260f21ec2d8beba06a133b4df6c58d7d755b17066dd7833e0ddaf31a0abe5cd"
+    },
+    "media/audio/splat-0.wav": {
+      "bytes": 57374,
+      "sha256": "cfb3b05a77f78c58bb6d3b90e7ef9eedcfcf5dd74a9e948a1606f2753d8484fc"
+    },
+    "media/audio/splat-1.wav": {
+      "bytes": 57374,
+      "sha256": "f4cf3300badebd80c4dafeca54e9187cac487f68f79bb68145286cdcdfb8b026"
+    },
+    "media/audio/splat-2.wav": {
+      "bytes": 57374,
+      "sha256": "35fbaa65fb1ba7f3fec3f23b4d717ae81aebe39a55d88267c5416fe8f4173aeb"
+    },
+    "media/audio/spray-loop.wav": {
+      "bytes": 105884,
+      "sha256": "07b84999c953a8f544396dcc3018b5efafaf89cdbde9e00855d86b89a036c7d3"
+    },
+    "media/audio/vacuum-loop.wav": {
+      "bytes": 105884,
+      "sha256": "36f2899fa8232bbd4bf56385b1691f1a0d01bca9e365cdda046567ac669885c9"
+    },
+    "media/audio/win.wav": {
+      "bytes": 176444,
+      "sha256": "db3fe916dbabe9bae0a2a9c842fbea4054307b5c00458a6f38c3538b3d92996e"
+    },
+    "media/defeat-approach.png": {
+      "bytes": 1871321,
+      "sha256": "34097c4eca6d1c86c7b11ecb421a90afda4098e4a54374c1f58e5c5d5284ab69"
+    },
+    "media/defeat-flight.png": {
+      "bytes": 2029248,
+      "sha256": "2ca1c474a17654bf68c588e4ba2fd0671f263b87b6bbf9d757442f550e10a785"
+    },
+    "media/defeat-impact.png": {
+      "bytes": 2079957,
+      "sha256": "a503f24a650276d87aac1cd17854de16f4b9f4b9a5baceced2f4491d3dea7d01"
+    },
+    "style.css": {
+      "bytes": 12456,
+      "sha256": "beac88cd24ff456e0750ab105ee540cdb40e7847f606d2bcd92e8e77cf905536"
+    },
+    "ui.js": {
+      "bytes": 11798,
+      "sha256": "b4a4b19fb46f536e89e2ee84e12602fa71076b00d1c03e2c29ddbcd8e4777b94"
+    },
+    "game.pck.part0": {
+      "bytes": 14000000,
+      "sha256": "7478d05e5b2d84d998b1649d921648752694d6e8d8edaa07f03eca7781c8f47c"
+    },
+    "game.pck.part1": {
+      "bytes": 14000000,
+      "sha256": "742c9b5ca3eb6a25a6a5cbebed293b18c69466f8593f81dc5800675e2a173923"
+    },
+    "game.pck.part2": {
+      "bytes": 14000000,
+      "sha256": "42b8450b02b61a7f8296eb8b9616bcd8ddc88406b07d3d41dfd71893cf4c1aa3"
+    },
+    "game.pck.part3": {
+      "bytes": 14000000,
+      "sha256": "c33f349c44bf979f5e6b8e1ff746b73f4f2a4c8131cc6421546ea5f9e93d8be2"
+    },
+    "game.pck.part4": {
+      "bytes": 14000000,
+      "sha256": "88e8db9663ff6e0687e3833f9ba2f1801e748197bb40b1f836424bbadeb0c9a5"
+    },
+    "game.pck.part5": {
+      "bytes": 14000000,
+      "sha256": "c94ae6f3156558d349f7cc643c1f944c6603553813f2f6daeedd2fb6fdcf4d12"
+    },
+    "game.pck.part6": {
+      "bytes": 14000000,
+      "sha256": "69d33fc13087ebe2853730658475a21fe49209a17faa3af2dbd2c73dbb0c2352"
+    },
+    "game.pck.part7": {
+      "bytes": 14000000,
+      "sha256": "5d4c912a6fa09dd6b1e3d6a3e5e3966795438993a3e806cd031e02dea5332f8d"
+    },
+    "game.pck.part8": {
+      "bytes": 14000000,
+      "sha256": "ad1cba16887bbb068df0c894d81a7860b1e594283b4bd4abd4fa3bea1208ac1c"
+    },
+    "game.pck.part9": {
+      "bytes": 4517400,
+      "sha256": "4a9f6875cc0b01938750385e50104403dee3fdbfeaa8b074908bf5e109e9a05b"
+    },
+    "game.wasm.gz": {
+      "bytes": 10054758,
+      "sha256": "8032306d52d52497129dce5b767baacb660d504bdde28668b1c1337b717eacd8"
+    },
+    "game.wasm.part0": {
+      "bytes": 14000000,
+      "sha256": "2e450ee711b29eddabcd5c00ba2813c3c6a2d9217a23d554cc11132e375226c9"
+    },
+    "game.wasm.part1": {
+      "bytes": 14000000,
+      "sha256": "258ceed6b218ad9bdb10ee46c33dc48ae41d951d466a3558d62bbd31a8e29691"
+    },
+    "game.wasm.part2": {
+      "bytes": 11514754,
+      "sha256": "e33beeecdb0d85c2111a7a3af43d5512b65eb692774d2ec4a35f34194aedf049"
+    },
+    "art-review/approval/index.html": {
+      "bytes": 7732,
+      "sha256": "afa981d527386ddda2e16305e16343b5be6f7033287e1636c1983e0c3ecec658"
+    },
+    "art-review/cinematic.html": {
+      "bytes": 2651,
+      "sha256": "662dcae7dc705eb26b355147b7743e9eb7d0e5bef5e80d1743b01244a583876d"
+    },
+    "art-review/index.html": {
+      "bytes": 8417,
+      "sha256": "4a5c2215703e2046d8c645762c95304bf3e122332b8691c1bc4437835247f6f2"
+    },
+    "art-review/mobile.html": {
+      "bytes": 1406,
+      "sha256": "c774a2c068abc8a080265b9d1cc214db4332a3ae1d2641a19be0eb8586fe47fe"
+    },
+    "art-review/revision/index.html": {
+      "bytes": 11325,
+      "sha256": "790de9697bcfafdd140461d72ba4e456f538b6b08c40b758a43db0158d76590d"
+    },
+    "art-review/production/index.html": {
+      "bytes": 8192,
+      "sha256": "29bdc0cbc184cd0e228ad21e02fa5add686c0c368c1ab20a79617584dbc5f753"
+    },
+    "art-review/revision/hero-boots.png": {
+      "bytes": 1250847,
+      "sha256": "ba8ac40cd093e78f0568ae623c02a3d3524d8f8b2af1f00434e1bd809c9cb553"
+    },
+    "art-review/revision/hero-face.png": {
+      "bytes": 1145103,
+      "sha256": "04fcbe4d23d01f1a67c0e53abe6a9a677719cbf0d9e3ca13f3fba900fa43c12b"
+    },
+    "art-review/revision/hero-threequarter.png": {
+      "bytes": 1407425,
+      "sha256": "c19d379b8237822c5f951e050677e26c9d3ba88a96f188335dd93e3f8afb8f7f"
+    },
+    "art-review/revision/paper-variants.png": {
+      "bytes": 1290933,
+      "sha256": "aa198e6a453e112eba26d066c0d585fca0824c539d9703e1886d40d69f994e3b"
+    },
+    "art-review/revision/roach-before.png": {
+      "bytes": 1686358,
+      "sha256": "268e91951097e4b3f948ad4e347c7f4559e9e657f571ba915b6d6f6d9f07d5bd"
+    },
+    "art-review/revision/roach-clay.png": {
+      "bytes": 1597598,
+      "sha256": "10459a14950a1dcc72c1be4e8998f8725c78f029b06b1aedc9c1963546ea8c9e"
+    },
+    "art-review/revision/roach-run.mp4": {
+      "bytes": 52660,
+      "sha256": "a6f7ffa79bf35f64ce27ec6944fb8086baec3521a2925409880e2ff4c8903ff0"
+    },
+    "art-review/revision/roach-threequarter.png": {
+      "bytes": 1679546,
+      "sha256": "9b8c1350361a8cb3ce88744ffe061470ee7549dac37e26420498b79de44f1fb9"
+    },
+    "art-review/revision/slipper-side.png": {
+      "bytes": 1327510,
+      "sha256": "b8dfd7e7e96015ce1d94d2f2d41f68f0486749a1f8c320ddcefbb34be1ac5dd5"
+    },
+    "art-review/revision/slipper-threequarter.png": {
+      "bytes": 1362060,
+      "sha256": "4d1a841ead98f486333fa23dc48338b0c16a99fe6f73311df3cadc5065c284b5"
+    },
+    "art-review/production/box-threequarter.png": {
+      "bytes": 1196475,
+      "sha256": "9b180455fafcadc095f6101955d9a1c646eece3c2d8a08102b0f9b7af0ec883e"
+    },
+    "art-review/production/hero-threequarter.png": {
+      "bytes": 1234460,
+      "sha256": "7ee1dfd2b4809b22cd44ae21d216dd946a42ec6907aa4e492725b826a14d19a6"
+    },
+    "art-review/production/roach-run.mp4": {
+      "bytes": 49102,
+      "sha256": "222ea3ddb32e9af018ae7a86ec77c14ec5709536abe6e0368abc209b1c3b4916"
+    },
+    "art-review/production/roach-threequarter.png": {
+      "bytes": 1146128,
+      "sha256": "2f73a0e1479192e21f1e59584ffc08d69fdea27b6688625fe558a9ea3d7189ec"
+    },
+    "art-review/production/room.png": {
+      "bytes": 1550098,
+      "sha256": "fd3d93b1a9762c58681c852fc96dc5acccbb250ee249a810448002b349ec2c84"
+    }
+  },
+  "unavailable_optional_paths": {},
+  "missing_required": []
+}
