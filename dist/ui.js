@@ -6,7 +6,24 @@ function toast(text){$('toast').textContent=text;$('toast').classList.add('show'
 const soundscape=new RoomAudio();
 const deathCinematic=new DeathCinematic($('death-screen'));
 const storyIntro=new StoryIntro($('story-screen'));
-function beginRun(){initAudio();send('start');$('canvas').focus({preventScroll:true});}
+let enteringRoom=false;
+function enterRoom(command,number){
+ if(enteringRoom)return;
+ enteringRoom=true;
+ const curtain=$('entry-transition');
+ const names=['','第一间','第二间','第三间','第四间','第五间'];
+ curtain.querySelector('.entry-transition__content>span').textContent=`CHAPTER ${String(number).padStart(2,'0')} / 05`;
+ const title=curtain.querySelector('strong');
+ title.textContent=`${names[number]||'下一间'}\n杂物间`;
+ curtain.hidden=false;
+ curtain.classList.remove('play');
+ void curtain.offsetWidth;
+ curtain.classList.add('play');
+ const quiet=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ setTimeout(()=>{command();$('canvas').focus({preventScroll:true});},quiet?0:350);
+ setTimeout(()=>{curtain.hidden=true;curtain.classList.remove('play');enteringRoom=false;},quiet?180:1700);
+}
+function beginRun(){initAudio();enterRoom(()=>send('start'),1);}
 function initAudio(){soundscape.unlock().catch(()=>{});deathCinematic.prepare();}
 function sound(kind,data={}){soundscape.event(kind,data);}
 window.gameEvent=function(event){const d=event.data||{};switch(event.kind){case'ready':document.title='蟑螂大作战';ready=true;window.dispatchEvent(new CustomEvent('dirty-room-game-ready'));failedLoading=false;clearTimeout(loadTimer);$('error-screen').hidden=true;$('start').disabled=false;$('start-label').textContent='进入房间';$('loading-fill').style.width='100%';$('loading-hint').textContent='找到虫母，才有机会彻底清理';break;case'toast':toast(d.text);break;case'part':if(performance.now()-lastPart>950){lastPart=performance.now();toast(d.text);}break;case'combo':$('combo-popup').textContent=d.text;$('combo-popup').classList.remove('show');void $('combo-popup').offsetWidth;$('combo-popup').classList.add('show');break;case'hurt':$('hurt').classList.remove('hit');void $('hurt').offsetWidth;$('hurt').classList.add('hit');if(navigator.vibrate)navigator.vibrate([30,20,35]);break;case'crit':$('flash').classList.remove('crit');void $('flash').offsetWidth;$('flash').classList.add('crit');break;case'sound':sound(d.kind,d);}}
@@ -21,7 +38,7 @@ window.receiveGameState=function(s){state=s;window.gameSnapshot=s;soundscape.set
  }
 };
 function renderCards(cards){$('upgrade-cards').replaceChildren();cards.forEach((c,index)=>{const button=document.createElement('button');button.className='upgrade-card '+(c.type==='weapon'?'weapon':'rune');button.appendChild(textNode('span','card-icon',c.icon));const body=document.createElement('div');body.appendChild(textNode('div','card-type',c.type==='weapon'?'更换武器':`符文 · 第 ${c.stack} 层`));body.appendChild(textNode('div','card-name',c.name));body.appendChild(textNode('div','card-desc',c.desc));if(c.type==='weapon')body.appendChild(textNode('div','card-combo',`替换 ${state.weapon_name} · 已有符文保留`));else if(c.weapon)body.appendChild(textNode('div','card-combo',`${state.weapon_name} 专属联动`));else if(c.stack>1)body.appendChild(textNode('div','card-combo','继续叠加 · 强化现有组合'));button.appendChild(body);button.onclick=()=>send('choose',{index});$('upgrade-cards').appendChild(button);});}
-$('start').onclick=()=>{if(!ready||storyIntro.active)return;initAudio();if(storyIntro.seen())beginRun();else storyIntro.start(beginRun,muted);};$('replay-story').onclick=()=>storyIntro.start(()=>$('replay-story').focus({preventScroll:true}),muted);$('pause').onclick=()=>send('pause');$('resume').onclick=()=>{send('resume');$('canvas').focus({preventScroll:true});};$('next').onclick=()=>{if(state?.campaign_complete)beginRun();else{send('next');$('canvas').focus({preventScroll:true});}};$('restart').onclick=beginRun;$('sound').onclick=()=>{muted=!muted;soundscape.setMuted(muted);$('sound').textContent='声音：'+(muted?'关闭':'开启');};
+$('start').onclick=()=>{if(!ready||storyIntro.active||enteringRoom)return;initAudio();if(storyIntro.seen())beginRun();else storyIntro.start(beginRun,muted);};$('replay-story').onclick=()=>storyIntro.start(()=>$('replay-story').focus({preventScroll:true}),muted);$('pause').onclick=()=>send('pause');$('resume').onclick=()=>{send('resume');$('canvas').focus({preventScroll:true});};$('next').onclick=()=>{if(state?.campaign_complete)beginRun();else enterRoom(()=>send('next'),Math.min(5,(state?.room||1)+1));};$('restart').onclick=beginRun;$('sound').onclick=()=>{muted=!muted;soundscape.setMuted(muted);$('sound').textContent='声音：'+(muted?'关闭':'开启');};
 const base=$('stick-base'),stick=$('stick');let center={x:0,y:0};function moveStick(e){const x=e.clientX-center.x,y=e.clientY-center.y,len=Math.hypot(x,y),scale=Math.min(1,43/Math.max(1,len));stick.style.transform=`translate(${x*scale}px,${y*scale}px)`;send('move',{x:x*scale/43,y:y*scale/43});}function resetStick(){pointer=null;stick.style.transform='translate(0,0)';send('move',{x:0,y:0});}
 base.addEventListener('pointerdown',e=>{if(state?.phase!=='playing')return;e.preventDefault();pointer=e.pointerId;base.setPointerCapture(pointer);const r=base.getBoundingClientRect();center={x:r.left+r.width/2,y:r.top+r.height/2};moveStick(e);});base.addEventListener('pointermove',e=>{if(e.pointerId===pointer)moveStick(e);});base.addEventListener('pointerup',resetStick);base.addEventListener('pointercancel',resetStick);base.addEventListener('lostpointercapture',resetStick);
 window.addEventListener('keydown',e=>{if(e.code==='Escape'||e.code==='KeyP'){if(state?.phase==='playing')send('pause');else if(state?.phase==='paused')send('resume');}if(state?.phase==='upgrade'&&['Digit1','Digit2','Digit3'].includes(e.code))send('choose',{index:Number(e.code.slice(-1))-1});if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space'].includes(e.code))e.preventDefault();});document.addEventListener('visibilitychange',()=>{soundscape.hidden=document.hidden;soundscape.updateMix();if(document.hidden){resetStick();if(state?.phase==='playing')send('pause');}});window.addEventListener('blur',()=>{resetStick();if(state?.phase==='playing')send('pause');});
