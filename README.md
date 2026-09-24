@@ -14,6 +14,11 @@
 
 ## 试玩与修改
 
+从 GitHub 克隆后，先运行 `python scripts/restore-github-chunks.py`。仓库将 12 个较大的
+`dist/game.*.part*` 文件拆成 `.ghchunk0`、`.ghchunk1` 两段；脚本按
+`docs/github-chunk-manifest.json` 还原，并逐项核对原文件的大小和 SHA-256。
+还原后运行 `npm run build` 检查网页包。GitHub 上的分段文件和还原结果字节一致。
+
 `dist/` 是完整可托管的网页运行版本。通过 HTTP 服务打开，不能直接双击 HTML。
 运行 `npm run build` 检查脚本、资源、分块哈希和静态页面链接。
 

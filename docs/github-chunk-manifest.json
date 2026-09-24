@@ -1,0 +1,110 @@
+[
+  {
+    "path": "dist/game.pck.part0",
+    "size": 14000000,
+    "sha256": "dcb867487c755f6f760db06ef7e9e80a647f56809af85d247790eae6783ff285",
+    "parts": [
+      "dist/game.pck.part0.ghchunk0",
+      "dist/game.pck.part0.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.pck.part1",
+    "size": 14000000,
+    "sha256": "d09e0b5fd2481331998724ae06ab13368ed36aae28d5cd06a01cb6942f9e2aac",
+    "parts": [
+      "dist/game.pck.part1.ghchunk0",
+      "dist/game.pck.part1.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.pck.part2",
+    "size": 14000000,
+    "sha256": "8eb0946578ef2576ffdbdfe2729bf666033dd516cb82350a08469e60c8baab27",
+    "parts": [
+      "dist/game.pck.part2.ghchunk0",
+      "dist/game.pck.part2.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.pck.part3",
+    "size": 14000000,
+    "sha256": "de0fe621c635218716c9a79624ac13d0bda94246bdb38fc1c9e47d5030e32814",
+    "parts": [
+      "dist/game.pck.part3.ghchunk0",
+      "dist/game.pck.part3.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.pck.part4",
+    "size": 14000000,
+    "sha256": "b0896065a3fe8ecda122fef5fc843a73ab59e86112f706fcd94fcd047496c73a",
+    "parts": [
+      "dist/game.pck.part4.ghchunk0",
+      "dist/game.pck.part4.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.pck.part5",
+    "size": 14000000,
+    "sha256": "0277bf5bc8c3567ac27c73f3069b79bff10717e03acca33c2bfad79231a72574",
+    "parts": [
+      "dist/game.pck.part5.ghchunk0",
+      "dist/game.pck.part5.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.pck.part6",
+    "size": 14000000,
+    "sha256": "427341caa87a5d44a008a4f2eed351093b1dbc5c85e8c36c15271c0a669fa732",
+    "parts": [
+      "dist/game.pck.part6.ghchunk0",
+      "dist/game.pck.part6.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.pck.part7",
+    "size": 14000000,
+    "sha256": "e1848139ef93ffc4140b27b98bb93b9cd551759af7a405188f55e38fb12d08fc",
+    "parts": [
+      "dist/game.pck.part7.ghchunk0",
+      "dist/game.pck.part7.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.pck.part8",
+    "size": 14000000,
+    "sha256": "6f74904dab881be139094aa41aa829fb19d42cfc9f9907730ed7bdb5f69df673",
+    "parts": [
+      "dist/game.pck.part8.ghchunk0",
+      "dist/game.pck.part8.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.wasm.part0",
+    "size": 14000000,
+    "sha256": "2e450ee711b29eddabcd5c00ba2813c3c6a2d9217a23d554cc11132e375226c9",
+    "parts": [
+      "dist/game.wasm.part0.ghchunk0",
+      "dist/game.wasm.part0.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.wasm.part1",
+    "size": 14000000,
+    "sha256": "258ceed6b218ad9bdb10ee46c33dc48ae41d951d466a3558d62bbd31a8e29691",
+    "parts": [
+      "dist/game.wasm.part1.ghchunk0",
+      "dist/game.wasm.part1.ghchunk1"
+    ]
+  },
+  {
+    "path": "dist/game.wasm.part2",
+    "size": 11514754,
+    "sha256": "e33beeecdb0d85c2111a7a3af43d5512b65eb692774d2ec4a35f34194aedf049",
+    "parts": [
+      "dist/game.wasm.part2.ghchunk0",
+      "dist/game.wasm.part2.ghchunk1"
+    ]
+  }
+]
